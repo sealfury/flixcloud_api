@@ -5,7 +5,7 @@ RSpec.describe Api::MoviesController, type: :request do
   describe 'successfully GET a collection of movies' do
 
     before do
-      get 'api/movies'
+      get '/api/movies'
     end
 
     it 'is expected to return a 200 response' do

@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get 'movies/index'
+  namespace :api do
+    resources :movies, only: [:index]
+  end
 end
