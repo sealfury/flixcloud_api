@@ -15,5 +15,10 @@ RSpec.describe Api::MoviesController, type: :request do
     it 'is expected to return five movies' do
       expect(response_json['movies'].count).to eq 5
     end
+
+    it 'is expected to have movie title in \'movies\'' do
+      expect(JSON.parse(response.body)['movies'].first['title'])
+      .to eq 'Factory Bot 2: F-Bot Finds Love In The Big City'
+    end
   end
 end
