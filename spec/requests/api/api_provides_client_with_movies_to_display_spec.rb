@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Api::MoviesController, type: :request do
-  let(:movies) { 5.times { create(:movie) } }
+  let!(:movies) { 5.times { create(:movie) } }
   describe 'successfully GET a collection of movies' do
 
     before do
