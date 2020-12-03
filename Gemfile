@@ -11,6 +11,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors', require: 'rack/cors'
+gem 'rest-client'
+
 
 group :development, :test do
   gem 'coveralls', require: false
@@ -19,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'webmock'
 end
 
 group :development do
