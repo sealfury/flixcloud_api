@@ -22,6 +22,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'webmock'
+  gem 'devise_token_auth'
 end
 
 group :development do
