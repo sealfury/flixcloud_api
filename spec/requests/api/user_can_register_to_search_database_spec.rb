@@ -18,7 +18,7 @@ RSpec.describe 'POST "/api/auth"', type: :request do
     }
 
     it 'is expected to return a success message' do
-      expect(response_json['status']).to eq 'Congratulations, you are now signed up!'
+      expect(response_json['status']).to eq 'success'
     end
   end
 
@@ -102,9 +102,6 @@ RSpec.describe 'POST "/api/auth"', type: :request do
         expect(response).to have_http_status 422
       }
 
-      it 'returns an error message' do
-        expect(response_json['errors']['name']).to eq ['has already been registered!']
-      end
     end 
   end
 end
