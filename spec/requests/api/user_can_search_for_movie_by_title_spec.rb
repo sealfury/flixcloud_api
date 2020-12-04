@@ -9,12 +9,14 @@ RSpec.describe Api::MoviesController, type: :request do
 
     before do
       get '/api/movies',
-        params: { query: movies.first.title },
-        headers: { authorization_headers }
+        params: { query: fbot_movie.title },
+        headers: authorization_headers 
     end
-    
+
     it {
-      expect(response).to have_http_status 201
+      expect(response).to have_http_status 200
     }
+
+    
   end
 end
