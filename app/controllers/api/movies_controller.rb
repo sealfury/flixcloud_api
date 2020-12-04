@@ -1,12 +1,10 @@
 class Api::MoviesController < ApplicationController
   API_KEY = Rails.application.credentials.moviedb[:api_key]  
-  API_URL = "https://api.themoviedb.org/3/discover/movie"
+  API_URL = "https://api.themoviedb.org/3"
 
   def index
-    url = API_URL
-    key = API_KEY
-    result = RestClient.get(url, params: 
-      {api_key: key, language: "en-US", sort_by: "popularity.desc", include_adult: "false", page: "1"})
+    result = RestClient.get("#{API_URL}/discover/movie", params: 
+      {api_key: API_KEY, language: "en-US", sort_by: "popularity.desc", include_adult: "false", page: "1"})
     body = JSON.parse(result.body)
     movies = sanitized_movies(body)  
 
