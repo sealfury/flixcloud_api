@@ -12,13 +12,6 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of :email }
     it { is_expected.to validate_confirmation_of :password }
 
-    context 'should  not have an invalid name' do
-      names = ['user name']
-      names.each do |name|
-        it { is_expected.not_to allow_value(name).for(:name) }
-      end
-    end
-
     context 'should  not have an invalid email address' do
       emails = ['user name', ' @example.com', 'ddd@.d']
       emails.each do |email|
