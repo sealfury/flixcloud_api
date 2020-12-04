@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors', require: 'rack/cors'
 gem 'rest-client'
-
+gem 'devise_token_auth'
 
 group :development, :test do
   gem 'coveralls', require: false
@@ -22,7 +22,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
   gem 'webmock'
-  gem 'devise_token_auth'
 end
 
 group :development do

@@ -101,7 +101,6 @@ RSpec.describe 'POST "/api/auth"', type: :request do
       it {
         expect(response).to have_http_status 422
       }
-
     end 
   end
 end
